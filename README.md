@@ -8,7 +8,10 @@ Copiar los elementos  package.json, vercel.json, index.html, .vercelignore para 
 
 ## How to use 
 copy  package.json, vercel.json, index.html, .vercelignore this elements and host them on some vercel quite easy since its all free
-
+.vercelignore
+13 B
+node_modules
+importante
 ```
 cd existing_repo
 git remote add origin https://gitlab.com/cv8980246/one-page-hosted-for-free.git
