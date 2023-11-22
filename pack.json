@@ -1,0 +1,11 @@
+{
+  "name": "curriculum-vitae",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {
+    "http-server": "^12.0.1"
+  }
+}
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+#cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #F6F6F6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+#first-container {
+  width: 100%;
+  display: flex;
+}
+
+#first-container img {
+  flex: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+#second-container {
+  width: 50%;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+  text-align: center;
+  color: #333333;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 36px;
+  margin: 20px 0;
+  color: #333333;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+footer {
+  margin-top: 30px;
+  border-top: 1px solid gray;
+  padding-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: gray;
+}
+
+button {
+  font-family: Montserrat;
+  background-color: blue;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 10px 0;
+  position: relative;
+  color: #fff;
+  border: 1px solid #fff;
+  color: #fff;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+</style>
+<script>
+function changeLanguage(language) {
+  var name = document.getElementById("cv-name");
+  var title = document.getElementById("cv-title");
+  var aboutHeader = document.querySelectorAll("section h3")[0];
+  var aboutText = document.querySelectorAll("section p")[0];
+  var experienceHeader = document.querySelectorAll("section h3")[1];
+  var experienceList = document.querySelectorAll("section ul")[0];
+  var educationHeader = document.querySelectorAll("section h3")[2];
+  var educationList = document.querySelectorAll("section ul")[1];
+  var skillsHeader = document.querySelectorAll("section h3")[3];
+  var skillsList = document.querySelectorAll("section ul")[2];
+
+  switch (language) {
+    case "english":
+      name.textContent = "Workshop";
+      title.textContent = "Website Portfolio One Page Free";
+      aboutHeader.textContent = "Where to register";
+      aboutText.innerHTML = 'Register on <a href="https://gitlab.com/">https://gitlab.com/</a> (config your account) y then on <a href="https://vercel.com/new/">https://vercel.com/new/</a>, connect it to GitLab, remember to use some easy password but that you wont use anywhere else.';
+      experienceHeader.textContent = "Commands for linux console optional";
+      experienceList.innerHTML = "Use the following commands:<br>write 'git' on your kali linux or install it if you using another distro<br>cd /home/distro/Desktop<br>ls -l<br>touch index.html<br>cat index.html<br>code index.html (write your code and save it once is done)<br>cat index.html<br>git init<br>git add index.html<br>git config --global user.email 'user@email.com'<br>git config --global user.name 'usuario'<br>git commit -m 'mi paginaweb primer push'<br>git push<br>Your HTML will appear on Github.<br>When writing on terminal 'code' Visual Studio Code will pop up. Input 'y' to install it if its needed.";
+      educationHeader.textContent = "Go to Gitlab";
+      educationList.innerHTML = "Make sure your content is the same as in GitHub.<br>You will need: package.json, vercel.json, index.html, .vercelignore.<br>You can create notes on GitLab that automatically will adopt the specified language(Python, C++, etc.).<br>This is how it would look like: on GitLab";
+      skillsHeader.textContent = "Deploy a Vercel";
+      skillsList.innerHTML = "open vercel here <a href='https://vercel.com/new/'>https://vercel.com/new/</a> and click contect my account.<br>then lookup for your portfolio.<br>tap 'Deploy' your gitlab will upload instantly.<br>To access, go to the dashboard there you will see your domain 'vercel app'.<br>Congrats you hosted your own website!";
+      break;
+    
+    case "russian":
+      name.textContent = "Мастерская";
+      title.textContent = "Портфолио сайта бесплатно";
+      aboutHeader.textContent = "Где зарегистрироваться";
+      aboutText.innerHTML = 'Зарегистрироваться  <a href="https://gitlab.com/">https://gitlab.com/</a> (открыть свой account) и затем в <a href="https://vercel.com/new/">https://vercel.com/new/</a>, Подключите свой GitLab к Vercel, не забывайте использовать простой пароль, который не используется на других сайтах.';
+      experienceHeader.textContent = "Команды в Linux terminal optional";
+      experienceList.innerHTML = "Введите git в вашем Kali Linux или установить его, если это другой дистр<br>cd /home/distro/Desktop<br>ls -l<br>touch index.html<br>cat index.html<br>code index.html (написать код и сохранить его после завершения)<br>cat index.html<br>git init<br>git add index.html<br>git config --global user.email 'использоватьсвою@электроннуюпочту.com'<br>git config --global user.name 'usuario'<br>git commit -m 'мой первый комментарий'<br>git push<br>Ваш HTML будет загружен на ваш GitLab.<br>Ввод 'кода' откроет код Visual Studio.<br>Введите 'у', чтобы установить его, если необходимо.";
+      educationHeader.textContent = "Перейти на страницу GitLab";
+      educationList.innerHTML = "Убедитесь, что содержание такое же, как на этом GitHub.<br>Вам потребуется: package.json, vercel.json, index.html, .vercelignore.<br>Вы можете создать текстовые заметки в GitLab, которые автоматически примут язык, который вы укажете (Python, C++, и т.д.).<br>Вот как это выглядеть: <br>на Gitlab";
+      skillsHeader.textContent = "Разместить в Vercele";
+      skillsList.innerHTML = "Перейти к Vercel <a href='https://vercel.com/new/'>https://vercel.com/new/</a> и нажмите на ваш GitLab, подключенный к учетной записи.<br>Найдите папку с вашим сайтом или портфолио.<br>Нажмите 'Развернуть' и она будет загружена автоматически.<br>Чтобы получить доступ к нему, в панели мониторинга появится ссылка с приложением vercel домена.<br>Поздравляем, у вас есть ваш сайт бесплатно!";
+      break;
+
+    case "spanish":
+      name.textContent = "Workshop";
+      title.textContent = "Website Portfolio One Page Gratis";
+      aboutHeader.textContent = "Donde Registrarte";
+      aboutText.innerHTML = 'Registrate en <a href="https://gitlab.com/">https://gitlab.com/</a> (configura tu cuenta) y posteriormente en <a href="https://vercel.com/new/">https://vercel.com/new/</a>, conecta tu GitLab con Vercel, recuerda usar una contraseña sencilla y que no uses en otros sitios.';
+      experienceHeader.textContent = "Commandos para tirar en consola de linux opcional";
+      experienceList.innerHTML = "escribe git en tu kali linux o instalalo si es otra distro:<br>Escribe 'git' en tu Kali Linux o instálalo si es otra distro<br>cd /home/distro/Desktop<br>ls -l<br>touch index.html<br>cat index.html<br>code index.html (escribe el código y lo guardas al terminar)<br>cat index.html<br>git init<br>git add index.html<br>git config --global user.email 'usuario@tucorreo.com'<br>git config --global user.name 'usuario'<br>git commit -m 'mi paginaweb primer push'<br>git push<br>Tu HTML se habrá subido a tu GitLab.<br>Al escribir 'code' se abrirá Visual Studio Code.<br>Escribe 'y' para instalarlo en caso de ser necesario.";
+      educationHeader.textContent = "Ve a la página de GitLab";
+      educationList.innerHTML = "Asegúrate de que el contenido esté igual que en este GitHub.<br>Necesitarás: package.json, vercel.json, index.html, .vercelignore.<br>Puedes crear notas de texto en GitLab que automáticamente adoptarán el lenguaje que se especifique (Python, C++, etc.).<br>Así es como quedaría: <br>en GitLab";
+      skillsHeader.textContent = "Deploy en Vercel";
+      skillsList.innerHTML = "Ve a Vercel <a href='https://vercel.com/new/'>https://vercel.com/new/</a> y haz clic en tu GitLab conectado a la cuenta.<br>Busca la carpeta con tu página web o portfolio.<br>Haz clic en 'Deploy' y se subirá automáticamente.<br>Para acceder a ella, en el dashboard vendrá el link con el dominio 'vercel app'.<br>¡Enhorabuena, ya tienes tu página web gratis!";
+      break;
+  }
+}
+
+
+</script>
+</head>
+<body>
+<div id="cv-container">
+  <div id="first-container">
+    <div class="left-section">
+      <img src="https://media.discordapp.net/attachments/901924942503891054/1176681162131914832/image.png?ex=656fc0ba&is=655d4bba&hm=115a691824f840df8c5d2b273589ae56eefc18d3d01dc5b0d9936587194cceee&=" alt="workshop" width="200" height="200">
+    </div>
+    <div id="second-container">
+      <h1 id="cv-name">Workshop</h1>
+      <h2 id="cv-title">website portfolio one page gratis</h2>
+      <div>
+        <button onclick="changeLanguage('english')">English</button>
+        <button onclick="changeLanguage('russian')">Russian</button>
+        <button onclick="changeLanguage('spanish')">Spanish</button>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h3>Donde registrarte </h3>
+    <p> Registrate en <a href="https://gitlab.com/">https://gitlab.com/</a> (configura tu cuenta) y posteriormente en <a href="https://vercel.com/new/">https://vercel.com/new/</a>, conecta tu gitlab con vercel, recuerda usar una contraseña sencilla y que no uses en otros sitios</p>
+  </section>
+  <section>
+    <h3>Commandos para tirar en consola de linux</h3>
+    <ul>
+     <li>escribe git en tu kali linux o instalalo si es otra distro</li>
+
+      <li> <p>cd /home/"distro"/Desktop<br>
+ls -l<br>
+touch index.html <br>
+cat index.html<br>
+code index.html<br>
+- escribimos el codigo y lo guardamos al terminar<br>
+cat index.html<br>
+git init<br>
+git add index.html<br>
+git config --global user.email "usuario@tucorreo.com"<br>
+git config --global user.name "usuario"<br>
+git commit -m "mi paginaweb primer push"<br>
+git push</p></li>
+      <li>tu html se habra subido a tu gitlab.</li>
+      <li>al escribir code se abrira visual code estudio, escribir "y" para instalaro en caso de ser necesario.</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Ve a la pagina de gitlab</h3>
+    <ul>
+      <li>asegurate de que el contenido este igual que en este github, necesitaras: pack.json, vercel.json, index.html, .vercelignore</li>
+      <li>puedes crear notas de texto en gitlab que automaticamente adoptaran el lenguaje que se especifique (python c...)</li>
+      <li> <a href="https://media.discordapp.net/attachments/901924942503891054/1176644084119642222/image.png?ex=656f9e32&is=655d2932&hm=bde4bdb6b029be2c59d2724eaec92a075ceb07d5558b244381fdbfbcdc1035b3&=">asi es como quedaria</a> </li>
+    </ul>
+  </section>
+  <section>
+    <h3>Deploy! en vercel</h3>
+    <ul>
+      <li> ve a vercel<a href="https://vercel.com/new/">https://vercel.com/new/</a></li>
+      <li>y haz click en tu gitlab conectado a la cuenta, busca la carpeta con pagina web o portfolio</li>
+      <li>clickea en debloy y se subira automaticamente</li>
+      <li>para acceder a ella en el dashboard vendra el link con el dominio " vercel app", enorabuena ya tienes tu pagina web gratis</li>
+    </ul>
+  </section>
+  <footer>Contact information: Dimitrovich702  | <a href="https://discord.gg/6qj3h97pb8"> Discord</a></footer>
+</div>
+</body>
+</html>
